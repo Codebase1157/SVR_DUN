@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.Python
+
+# Testing / tooling
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Run artifacts: outputs are reproducible, so they are not tracked.
+# The one exception is outputs/reference_runs/, which IS tracked on purpose
+# so a fresh clone has something to diff a new run against.
+outputs/*
+!outputs/reference_runs/
+!outputs/.gitkeep
+
+# Model weights and data are large and/or gated: never commit them.
+*.pt
+*.pth
+*.ckpt
+!outputs/reference_runs/**/*.pt
+data/
+datasets/
+*.mat
+*.h5
+*.hdf5
+*.tif
+*.tiff
+
+# Materialised splits name files on YOUR disk; the SPECIFIED ones are tracked.
+splits/*_materialised.json
+
+# OS
+.DS_Store
+Thumbs.db

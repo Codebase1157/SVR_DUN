@@ -1,0 +1,18 @@
+# Notebooks: keep diffs readable and avoid CRLF churn
+*.ipynb   text eol=lf
+*.py      text eol=lf
+*.yaml    text eol=lf
+*.yml     text eol=lf
+*.json    text eol=lf
+*.md      text eol=lf
+
+# Binary artifacts
+*.png     binary
+*.pt      binary
+*.zip     binary
+
+# Mark generated/large files so GitHub collapses them in diffs
+svrdun/reported.py       linguist-generated=false
+configs/*.yaml           linguist-generated=true
+outputs/**               linguist-generated=true
+notebooks/*.ipynb        linguist-documentation=true
